@@ -1,0 +1,10 @@
+{
+  "name": "secretsentinel",
+  "private": true,
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=secret-leak-detector-frontend"
+  }
+}
