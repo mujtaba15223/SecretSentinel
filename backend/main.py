@@ -26,6 +26,7 @@ app = FastAPI(
     title="Secret Leak Detector API",
     description="API for scanning codebases for exposed secrets.",
     version="1.0.0",
+    root_path="/api" if os.getenv("VERCEL") else "",
     lifespan=lifespan,
 )
 
