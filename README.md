@@ -1,13 +1,6 @@
-# 🔐 Secret Leak Detector
+# SecretSentinel
 
 > A developer security tool that detects exposed API keys, authentication tokens, passwords, database credentials, private keys, and other sensitive information before they reach production or public repositories.
-
-[![Python](https://img.shields.io/badge/Python-3.13+-blue?logo=python)](https://www.python.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-API-green?logo=fastapi)](https://fastapi.tiangolo.com/)
-[![React](https://img.shields.io/badge/React-18-blue?logo=react)](https://react.dev/)
-[![Vite](https://img.shields.io/badge/Vite-6-purple?logo=vite)](https://vite.dev/)
-[![Git](https://img.shields.io/badge/Git-Pre--Commit-orange?logo=git)](https://git-scm.com/)
-[![License](https://img.shields.io/badge/License-MIT-yellow)](#license)
 
 ---
 
