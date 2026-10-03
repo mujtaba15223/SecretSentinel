@@ -95,12 +95,14 @@ def scan_directory(directory: str) -> list[dict]:
     root = Path(directory)
 
     if not root.exists():
-        print(f"❌ Directory not found: {directory}")
-        return []
+        raise FileNotFoundError(
+            f"Directory not found: {directory}"
+        )
 
     if not root.is_dir():
-        print(f"❌ Not a directory: {directory}")
-        return []
+        raise NotADirectoryError(
+            f"Not a directory: {directory}"
+        )
 
     all_findings = []
 
@@ -179,7 +181,11 @@ if __name__ == "__main__":
 
     print(f"\n🔍 Scanning: {directory}")
 
-    results = scan_directory(directory)
+    try:
+        results = scan_directory(directory)
+    except OSError as error:
+        print(f"\n❌ Could not scan directory: {error}")
+        sys.exit(1)
 
     results = deduplicate_findings(results)
 
